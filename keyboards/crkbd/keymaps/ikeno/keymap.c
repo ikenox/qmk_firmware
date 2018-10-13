@@ -56,6 +56,7 @@ enum macro_keycodes {
 #define KC_CTLTB CTL_T(KC_TAB)
 #define KC_GUIEI GUI_T(KC_LANG2)
 #define KC_ALTKN ALT_T(KC_LANG1)
+#define KC_CTLSP LCTL(KC_SPC)
 
 
 // _-=+[]{}\|;:''
@@ -75,13 +76,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-      XXXXX,     1,     2,     3,     4,     5,                      0,     1,     2,     3, XXXXX, XXXXX,\
+      XXXXX,     1,     2,     3,     4,     5,                      0,     1,     2,     3, XXXXX,   ESC,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
       XXXXX,    F1,    F2,    F3,    F4,    F5,                     F6,     4,     5,     6, XXXXX, XXXXX,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
       XXXXX,    F7,    F8,    F9,   F10,   F11,                    F12,     7,     8,     9, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
+                                  GUIEI, XXXXX, XXXXX,    XXXXX, CTLSP, XXXXX \
                               //`--------------------'  `--------------------'
   ),
 
@@ -93,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
       XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                  XXXXX, XXXXX,    LT,    GT,  LBRC,  RBRC,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
+                                  GUIEI, XXXXX, XXXXX,    XXXXX, XXXXX, XXXXX \
                               //`--------------------'  `--------------------'
   ),
 
