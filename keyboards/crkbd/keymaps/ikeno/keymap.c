@@ -59,8 +59,6 @@ enum macro_keycodes {
 #define KC_CTLSP LCTL(KC_SPC)
 
 
-// _-=+[]{}\|;:''
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
@@ -70,31 +68,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        LSFT,     Z,     X,     C,     V,     B,                      N,     M,  COMM,   DOT,  SLSH,  RSFT,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, RAISE, LOWER,      ENT,   SPC, ALTKN \
+                                  GUIEI,   SPC, RAISE,    LOWER,   ENT, ALTKN \
                               //`--------------------'  `--------------------'
   ),
 
   [_LOWER] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                      0,     1,     2,     3, XXXXX, XXXXX,\
+      XXXXX, XXXXX,     1,     2,     3, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      CTLTB,    F1,    F2,    F3,    F4,    F5,                     F6,     4,     5,     6, XXXXX, XXXXX,\
+      CTLTB, XXXXX,     4,     5,     6, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT,    F7,    F8,    F9,   F10,   F11,                    F12,     7,     8,     9, XXXXX, XXXXX,\
+       LSFT, XXXXX,     7,     8,     9,     0,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, RAISE, LOWER,      ENT,   SPC, ALTKN \
+                                  GUIEI,   SPC, RAISE,    LOWER, CTLSP, ALTKN \
                               //`--------------------'  `--------------------'
   ),
 
   [_RAISE] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-        GRV,  EXLM,    AT,  HASH,   DLR,  PERC,                   CIRC,  AMPR,  ASTR,  LPRN,  RPRN,  BSLS,\
+      XXXXX, XXXXX,   GRV,  CIRC,  TILD, XXXXX,                  XXXXX,  ASTR,  LPRN,  RPRN,  LBRC,  RBRC,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      CTLTB, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                  XXXXX,  PLUS,   EQL,  LCBR,  RCBR,  PIPE,\
+      CTLTB, XXXXX,    AT,  HASH,   DLR,  PERC,                   PLUS,   EQL,  LCBR,  RCBR,  AMPR,  PIPE,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                  XXXXX, XXXXX,    LT,    GT,  LBRC,  RBRC,\
+       LSFT, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                  XXXXX,  EXLM,    LT,    GT,  BSLS, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, RAISE, LOWER,      ENT,   SPC, ALTKN \
+                                  GUIEI,   SPC, RAISE,    LOWER,   ENT, ALTKN \
                               //`--------------------'  `--------------------'
   ),
 
@@ -106,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
       LSMOD,  LHUD,  LSAD,  LVAD, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, RAISE, LOWER,      ENT,   SPC, ALTKN \
+                                  GUIEI,   SPC, RAISE,    LOWER,   ENT, ALTKN \
                               //`--------------------'  `--------------------'
   )
 };
