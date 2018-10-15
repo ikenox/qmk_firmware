@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        LSFT, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                  XXXXX,  EXLM,    LT,    GT,  BSLS, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI,   SPC, RAISE,    LOWER,   ENT, ALTKN \
+                                  GUIEI,   SPC, RAISE,    LOWER, CTLSP, ALTKN \
                               //`--------------------'  `--------------------'
   ),
 
