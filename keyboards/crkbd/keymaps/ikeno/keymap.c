@@ -74,11 +74,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-      XXXXX, XXXXX,     1,     2,     3, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+       TILD,  EXLM,    AT,  HASH,   DLR,  PERC,                   AMPR,  ASTR,  LPRN,  LCBR,  LBRC,  MINS,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      CTLTB, XXXXX,     4,     5,     6, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+        GRV,     1,     2,     3,     4,     5,                   PLUS,   EQL,  RPRN,  RCBR,  RBRC,  PIPE,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT, XXXXX,     7,     8,     9,     0,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+       CIRC,     6,     7,     8,     9,     0,                  XXXXX,  BSPC,    LT,    GT,  SLSH,  BSLS,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                   GUIEI,   SPC, RAISE,    LOWER, CTLSP, ALTKN \
                               //`--------------------'  `--------------------'
@@ -86,11 +86,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-      XXXXX, XXXXX,  XXXX,  XXXX,  XXXX, XXXXX,                  XXXXX,  ASTR,  LPRN,  RPRN,  LBRC,  RBRC,\
+       TILD,  EXLM,    AT,  HASH,   DLR,  PERC,                   AMPR,  ASTR,  LPRN,  LCBR,  LBRC,  MINS,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      CTLTB, XXXXX,    AT,  HASH,   DLR,  PERC,                   PLUS,   EQL,  LCBR,  RCBR,  AMPR,  PIPE,\
+        GRV,     1,     2,     3,     4,     5,                   PLUS,   EQL,  RPRN,  RCBR,  RBRC,  PIPE,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT, XXXXX,  TILD,   GRV,  CIRC, XXXXX,                  XXXXX,  EXLM,    LT,    GT,  XXXX,  BSLS,\
+       CIRC,     6,     7,     8,     9,     0,                  XXXXX,  BSPC,    LT,    GT,  SLSH,  BSLS,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                   GUIEI,   SPC, RAISE,    LOWER, CTLSP, ALTKN \
                               //`--------------------'  `--------------------'
