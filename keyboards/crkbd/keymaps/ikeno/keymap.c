@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-       TILD,  EXLM,    AT,  HASH,   DLR,  PERC,                   AMPR,  ASTR,  LPRN,  LCBR,  LBRC,  MINS,\
+       TILD,  EXLM,    AT,  HASH,   DLR,  PERC,                   AMPR,  ASTR,  LPRN,  LCBR,  LBRC,  UNDS,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
         GRV,     1,     2,     3,     4,     5,                   PLUS,   EQL,  RPRN,  RCBR,  RBRC,  PIPE,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-       TILD,  EXLM,    AT,  HASH,   DLR,  PERC,                   AMPR,  ASTR,  LPRN,  LCBR,  LBRC,  MINS,\
+       TILD,  EXLM,    AT,  HASH,   DLR,  PERC,                   AMPR,  ASTR,  LPRN,  LCBR,  LBRC,  UNDS,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
         GRV,     1,     2,     3,     4,     5,                   PLUS,   EQL,  RPRN,  RCBR,  RBRC,  PIPE,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
