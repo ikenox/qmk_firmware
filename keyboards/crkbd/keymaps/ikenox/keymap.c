@@ -33,11 +33,11 @@
 #define KC_RAISE TD(TD_RAISE)
 #define KC_LOWER TD(TD_LOWER)
 
-#define KC_RAENT RALT_T(KC_ENT)
-#define KC_LASPC LALT_T(KC_SPC)
+#define KC_RAENT KC_ENT
+#define KC_LASPC KC_SPC
 
 #define KC_RSBSL RSFT_T(KC_BSLS)
-#define KC_LSSLS LSFT_T(KC_SLSH)
+#define KC_RSSLS RSFT_T(KC_SLSH)
 
 #define KC_RST  RESET
 #define KC_DBUG DEBUG
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
     CTLTB, A  , O  , E  , I  , U  ,             D  , M  , T  , N  , S  ,MINS,
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-     LSFT,SCLN, Q  , Z  , V  , X  ,             B  , H  , J  , K  , L  ,LSSLS,
+     LSFT,SCLN, Q  , Z  , V  , X  ,             B  , H  , J  , K  , L  ,RSSLS,
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
                       GUIEI,RAISE,LASPC,  RAENT,LOWER,GUIKN \
   //                    `----+----+----' `----+----+----'
