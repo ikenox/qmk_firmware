@@ -30,8 +30,10 @@
 #define KC_GUIKN GUI_T(KC_LANG1)
 #define KC_CTLSP LCTL(KC_SPC)
 
-#define KC_RAISE TD(TD_RAISE)
-#define KC_LOWER TD(TD_LOWER)
+#define KC_LOWER LOWER
+#define KC_RAISE RAISE
+
+#define KC_ALTKN ALT_T(KC_LANG1)
 
 #define KC_RAENT KC_ENT
 #define KC_LASPC KC_SPC
@@ -55,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
      LSFT,SCLN, Q  , Z  , V  , X  ,             B  , H  , J  , K  , L  ,RSSLS,
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                      GUIEI,RAISE,LASPC,  RAENT,LOWER,GUIKN \
+                      GUIEI,RAISE,LASPC,  RAENT,LOWER,ALTKN \
   //                    `----+----+----' `----+----+----'
   ),
 
@@ -91,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
      LSFT, Z  , X  , C  , V  , B  ,             N  , M  ,COMM,DOT ,SLSH,RSBSL,
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                      GUIEI,RAISE,LASPC,  RAENT,LOWER,GUIKN \
+                      GUIEI,RAISE,LASPC,  RAENT,LOWER,ALTKN \
   //                    `----+----+----' `----+----+----'
   ),
 
@@ -103,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
      CIRC, 6  , 7  , 8  , 9  , 0  ,                ,BSPC, LT , GT ,    ,    ,\
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                      GUIEI,RAISE,LASPC,  RAENT,LOWER,GUIKN \
+                      GUIEI,RAISE,LASPC,  RAENT,LOWER,ALTKN \
   //                    `----+----+----' `----+----+----'
   ),
 
@@ -115,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
      CIRC, 6  , 7  , 8  , 9  , 0  ,                ,BSPC, LT , GT ,    ,    ,\
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                      GUIEI,RAISE,LASPC,  RAENT,LOWER,GUIKN \
+                      GUIEI,RAISE,LASPC,  RAENT,LOWER,ALTKN \
   //                    `----+----+----' `----+----+----'
   ),
 
