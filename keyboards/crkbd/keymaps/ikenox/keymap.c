@@ -30,8 +30,8 @@
 #define KC_GUIKN GUI_T(KC_LANG1)
 #define KC_CTLSP LCTL(KC_SPC)
 
-#define KC_LOWER LOWER
-#define KC_RAISE RAISE
+#define KC_LOWER MO(_LOWER)
+#define KC_RAISE MO(_RAISE)
 
 #define KC_ALTKN ALT_T(KC_LANG1)
 
@@ -51,11 +51,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_EDVORAK] = LAYOUT_kc(
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-     ESC ,QUOT,COMM,DOT , P  , Y  ,             F  , G  , C  , R  , W  ,BSLS,
+     ESC ,QUOT,COMM,DOT , P  , Y  ,             F  , G  , S  , R  , W  ,BSLS,
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-    CTLTB, A  , O  , E  , I  , U  ,             D  , M  , T  , N  , S  ,MINS,
+    CTLTB, A  , O  , E  , I  , U  ,             D  , M  , T  , N  , B  ,MINS,
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-     LSFT,SCLN, Q  , Z  , V  , X  ,             B  , H  , J  , K  , L  ,RSSLS,
+     LSFT,SCLN, Q  , V  , Z  , X  ,             H  , J  , K  , L  , C ,RSSLS,
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
                       GUIEI,RAISE,LASPC,  RAENT,LOWER,ALTKN \
   //                    `----+----+----' `----+----+----'
