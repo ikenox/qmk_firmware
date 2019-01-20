@@ -5,3 +5,5 @@ SRC += edvorakjp.c \
 ifeq ($(TAP_DANCE_ENABLE), yes)
 SRC += edvorakjp_tap_dance.c
 endif
+
+#CONSOLE_ENABLE=yes

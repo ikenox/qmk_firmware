@@ -146,12 +146,12 @@ bool process_record_edvorakjp_config(uint16_t keycode, keyrecord_t *record) {
         set_enable_kc_lang(keycode == KC_MAC);
       }
       return false;
-    case KC_EXTON:
-    case KC_EXTOFF:
-      if (record->event.pressed) {
-        set_enable_jp_extra_layer(keycode == KC_EXTON);
-      }
-      return false;
+    //case KC_EXTON:
+    //case KC_EXTOFF:
+    //  if (record->event.pressed) {
+    //    set_enable_jp_extra_layer(keycode == KC_EXTON);
+    //  }
+    //  return false;
   }
   return true;
 }
@@ -202,13 +202,36 @@ bool process_record_layer(uint16_t keycode, keyrecord_t *record) {
 }
 
 bool process_record_ime(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case KC_JPN:
-    case KC_ENG:
-      if (record->event.pressed) {
-        set_japanese_mode(keycode == KC_JPN);
-      }
-      return false;
+  //switch (keycode) {
+  //  case KC_JPN:
+  //  case KC_ENG:
+  //    if (record->event.pressed) {
+  //      set_japanese_mode(keycode == KC_JPN);
+  //    }
+  //    return false;
+  //}
+  return true;
+}
+
+static int key_led_map[8][6] = {
+    {24,23,18,17,10,9 },
+    {25,22,19,16,11,8 },
+    {26,21,20,15,12,7 },
+    {-1,-1,-1,14,13,6 },
+    {24,23,18,17,10,9 },
+    {25,22,19,16,11,8 },
+    {26,21,20,15,12,7 },
+    {-1,-1,-1,14,13,6 },
+};
+
+bool process_record_led(uint16_t keycode, keyrecord_t *record) {
+  if(is_master ^ (record->event.key.row >= 4)){
+    if (record->event.pressed) {
+        rgblight_setrgb_at(0,255,0,key_led_map[record->event.key.row][record->event.key.col]);
+    }
+    else {
+        rgblight_sethsv_at(0,0,0,key_led_map[record->event.key.row][record->event.key.col]);
+    }
   }
   return true;
 }

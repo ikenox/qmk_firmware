@@ -7,6 +7,7 @@
 #define EECONFIG_EDVORAK (uint8_t *)20
 
 extern keymap_config_t keymap_config;
+extern uint8_t is_master;
 
 enum edvorakjp_layers {
   _EDVORAK = 0,
@@ -74,5 +75,6 @@ bool process_record_edvorakjp_swap_scln(uint16_t keycode, keyrecord_t *record);
 bool process_record_edvorakjp_config(uint16_t keycode, keyrecord_t *record);
 bool process_record_layer(uint16_t keycode, keyrecord_t *record);
 bool process_record_ime(uint16_t keycode, keyrecord_t *record);
+bool process_record_led(uint16_t keycode, keyrecord_t *record);
 
 #endif // EDVORAKJP

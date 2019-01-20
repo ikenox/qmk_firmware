@@ -62,30 +62,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                    `----+----+----' `----+----+----'
   ),
 
-  [_EDVORAKJ1] = LAYOUT_kc(
-  //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         , AI , OU , EI ,    ,    ,                ,    ,    ,    ,    ,    ,
-  //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         ,    ,    ,    ,    ,    ,                ,    ,    , Y  ,    ,    ,
-  //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         ,ANN ,ONN ,ENN ,INN ,UNN ,                ,    ,    ,    ,    ,    ,
-  //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                             ,    ,    ,      ,    ,
-  //                    `----+----+----' `----+----+----'
-  ),
-
-  [_EDVORAKJ2] = LAYOUT_kc(
-  //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         , AI , OU , EI ,    ,    ,                ,    ,    ,    ,    ,    ,
-  //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         ,    ,    ,    ,    ,    ,                , Y  ,    ,    ,    ,    ,
-  //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         ,ANN ,ONN ,ENN ,INN ,UNN ,                ,    ,    ,    ,    ,    ,
-  //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                             ,    ,    ,      ,    ,
-  //                    `----+----+----' `----+----+----'
-  ),
-
   [_QWERTY] = LAYOUT_kc(
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
      TAB , Q  , W  , E  , R  , T  ,             Y  , U  , I  , O  , P  ,MINS,
@@ -124,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_ADJUST] = LAYOUT_kc(
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         ,    ,    ,   ,EXTOFF,   ,                ,EXTON,   ,    ,    ,    ,
+         ,    ,    ,   ,     ,   ,                 ,    ,   ,    ,    ,    ,
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
          ,    ,    ,QWER,WIN ,RST ,            RTOG,MAC ,EDJP,    ,    ,    ,
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
@@ -148,28 +124,24 @@ void matrix_scan_user(void) {
 
 #ifdef RGBLIGHT_EFFECT_STATIC_GRADIENT
 uint32_t layer_state_set_keymap(uint32_t state) {
-  rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
-  switch (biton32(state)) {
-    case _EDVORAKJ1:
-    case _EDVORAKJ2:
-      // _EDVORAKJ1 & J2 are same colored
-      rgblight_sethsv_noeeprom_white();
-      break;
-    case _LOWER:
-      rgblight_sethsv_noeeprom_goldenrod();
-      break;
-    case _RAISE:
-      rgblight_sethsv_noeeprom_turquoise();
-      break;
-    case _ADJUST:
-      rgblight_sethsv_noeeprom_springgreen();
-      break;
-    default: //  for any other layers, or the default layer
-      //rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_GRADIENT + 3);
-      //rgblight_sethsv_noeeprom_red();
-      rgblight_sethsv_noeeprom_white();
-      break;
-  }
+  //switch (biton32(state)) {
+  //  case _LOWER:
+  //    rgblight_sethsv_noeeprom_goldenrod();
+  //    break;
+  //  case _RAISE:
+  //    rgblight_sethsv_noeeprom_turquoise();
+  //    break;
+  //  case _ADJUST:
+  //    rgblight_sethsv_noeeprom_springgreen();
+  //    break;
+  //  default: //  for any other layers, or the default layer
+  //    //rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_GRADIENT + 3);
+  //    //rgblight_sethsv_noeeprom_red();
+  //    rgblight_sethsv_noeeprom_white();
+  //    break;
+  //}
   return state;
 }
 #endif
+
+
