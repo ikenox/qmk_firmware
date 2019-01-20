@@ -230,7 +230,7 @@ bool process_record_led(uint16_t keycode, keyrecord_t *record) {
         rgblight_setrgb_at(0,255,0,key_led_map[record->event.key.row][record->event.key.col]);
     }
     else {
-        rgblight_sethsv_at(0,0,0,key_led_map[record->event.key.row][record->event.key.col]);
+        rgblight_setrgb_at(0,0,0,key_led_map[record->event.key.row][record->event.key.col]);
     }
   }
   return true;

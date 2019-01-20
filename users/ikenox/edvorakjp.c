@@ -10,7 +10,7 @@ void matrix_init_user(void) {
   matrix_init_keymap();
 
   rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
-  rgblight_sethsv(0,0,255);
+  rgblight_sethsv(0,0,0);
 }
 
 __attribute__ ((weak))
