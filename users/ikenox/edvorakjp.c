@@ -9,8 +9,9 @@ void matrix_init_user(void) {
   edvorakjp_status_init();
   matrix_init_keymap();
 
-  rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
-  rgblight_sethsv(20,20,20);
+  rgblight_enable_noeeprom();
+  rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
+  rgblight_sethsv_springgreen();
 }
 
 __attribute__ ((weak))
@@ -40,3 +41,5 @@ __attribute__ ((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
+
+

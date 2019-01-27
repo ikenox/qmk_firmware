@@ -227,10 +227,10 @@ static int key_led_map[8][6] = {
 bool process_record_led(uint16_t keycode, keyrecord_t *record) {
   if(is_master ^ (record->event.key.row >= 4)){
     if (record->event.pressed) {
-        rgblight_setrgb_at(0,255,0,key_led_map[record->event.key.row][record->event.key.col]);
+        rgblight_setrgb_at(255,0,0,key_led_map[record->event.key.row][record->event.key.col]);
     }
     else {
-        rgblight_setrgb_at(20,20,20,key_led_map[record->event.key.row][record->event.key.col]);
+        rgblight_sethsv_springgreen_at(key_led_map[record->event.key.row][record->event.key.col]);
     }
   }
   return true;

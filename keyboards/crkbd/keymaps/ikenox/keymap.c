@@ -24,6 +24,7 @@
 #define KC_TMB6 RALT_T(KC_ENT)
 #define KC_TMB7 KC_DEL
 #define KC_RGB_TOG RGB_TOG
+#define KC_RGB_MOD RGB_MOD
 #define KC_TMB8 RALT(KC_ENT)
 #define KC_TMB9 LGUI(KC_TAB)
 #define KC_CTLTB CTL_T(KC_TAB)
@@ -102,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
          ,    ,    ,   ,     ,   ,                 ,    ,   ,    ,    ,    ,
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         ,    ,    ,QWER,WIN ,RST ,            RTOG,MAC ,EDJP,    ,    ,    ,
+         ,    ,    ,QWER,WIN ,RST ,            RTOG,MAC ,EDJP,    ,    ,RGB_MOD,
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
          ,    ,    ,    ,    ,    ,                ,    ,    ,    ,    ,RGB_TOG,
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
@@ -121,27 +122,3 @@ void matrix_scan_user(void) {
   iota_gfx_task();  // this is what updates the display continuously
 }
 #endif
-
-#ifdef RGBLIGHT_EFFECT_STATIC_GRADIENT
-uint32_t layer_state_set_keymap(uint32_t state) {
-  //switch (biton32(state)) {
-  //  case _LOWER:
-  //    rgblight_sethsv_noeeprom_goldenrod();
-  //    break;
-  //  case _RAISE:
-  //    rgblight_sethsv_noeeprom_turquoise();
-  //    break;
-  //  case _ADJUST:
-  //    rgblight_sethsv_noeeprom_springgreen();
-  //    break;
-  //  default: //  for any other layers, or the default layer
-  //    //rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_GRADIENT + 3);
-  //    //rgblight_sethsv_noeeprom_red();
-  //    rgblight_sethsv_noeeprom_white();
-  //    break;
-  //}
-  return state;
-}
-#endif
-
-
