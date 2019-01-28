@@ -1446,7 +1446,6 @@ void led_set(uint8_t usb_led)
   led_set_kb(usb_led);
 }
 
-
 //------------------------------------------------------------------------------
 // Override these functions in your keymap file to play different tunes on
 // different events such as startup and bootloader jump

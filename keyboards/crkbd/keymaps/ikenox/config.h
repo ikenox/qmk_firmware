@@ -21,4 +21,6 @@
 #define RGBLIGHT_SAT_STEP 17
 #define RGBLIGHT_VAL_STEP 17
 
+#define DRIVER_LED_TOTAL 54
+
 #endif // CONFIG_USER_H

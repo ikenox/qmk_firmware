@@ -1,4 +1,5 @@
 #include "edvorakjp.h"
+#include "rgb_matrix.h"
 
 #if TAP_DANCE_ENABLE != yes
 static uint16_t time_on_pressed;
@@ -172,6 +173,7 @@ bool process_record_layer(uint16_t keycode, keyrecord_t *record) {
 #if TAP_DANCE_ENABLE != yes
     case LOWER:
       if (record->event.pressed) {
+
         layer_on(_LOWER);
         time_on_pressed = record->event.time;
       } else {
@@ -213,7 +215,7 @@ bool process_record_ime(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-static int key_led_map[8][6] = {
+static uint8_t key_led_map[8][6] = {
     {24,23,18,17,10,9 },
     {25,22,19,16,11,8 },
     {26,21,20,15,12,7 },
@@ -224,9 +226,23 @@ static int key_led_map[8][6] = {
     {-1,-1,-1,14,13,6 },
 };
 
+//static uint32_t rgb_map[8][6] = {
+//    {0,0,0,0,0,0},
+//    {0,0,0,0,0,0},
+//    {0,0,0,0,0,0},
+//    {0,0,0,0,0,0},
+//    {0,0,0,0,0,0},
+//    {0,0,0,0,0,0},
+//    {0,0,0,0,0,0},
+//    {0,0,0,0,0,0},
+//};
+
 bool process_record_led(uint16_t keycode, keyrecord_t *record) {
   if(is_master ^ (record->event.key.row >= 4)){
     if (record->event.pressed) {
+//        uint32_t rgb;
+//        rgb = rgblight_get_rgb(key_led_map[record->event.key.row][record->event.key.col]);
+//        rgb_map[record->event.key.row][record->event.key.col] = rgb;
         rgblight_setrgb_at(255,0,0,key_led_map[record->event.key.row][record->event.key.col]);
     }
     else {

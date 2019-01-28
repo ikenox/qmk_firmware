@@ -180,6 +180,7 @@ void rgb_matrix_increase_speed(void);
 void rgb_matrix_decrease_speed(void);
 void rgb_matrix_mode(uint8_t mode);
 void rgb_matrix_mode_noeeprom(uint8_t mode);
+uint32_t rgb_matrix_get_rgb(uint8_t index);
 uint32_t rgb_matrix_get_mode(void);
 
 #ifndef RGBLIGHT_ENABLE
@@ -203,8 +204,9 @@ uint32_t rgb_matrix_get_mode(void);
 #define rgblight_mode(mode) rgb_matrix_mode(mode)
 #define rgblight_mode_noeeprom(mode) rgb_matrix_mode_noeeprom(mode)
 #define rgblight_get_mode() rgb_matrix_get_mode()
-
+#define rgblight_get_rgb(index) rgb_matrix_get_rgb(index)
 #endif
+
 
 typedef struct {
     /* Perform any initialisation required for the other driver functions to work. */

@@ -31,6 +31,9 @@
 #define KC_GUIEI GUI_T(KC_LANG2)
 #define KC_GUIKN GUI_T(KC_LANG1)
 #define KC_CTLSP LCTL(KC_SPC)
+#define KC_RGB_HUI RGB_HUI
+#define KC_RGB_VAI RGB_VAI
+#define KC_RGB_VAD RGB_VAD
 
 #define KC_LOWER MO(_LOWER)
 #define KC_RAISE MO(_RAISE)
@@ -101,9 +104,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_ADJUST] = LAYOUT_kc(
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         ,    ,    ,   ,     ,   ,                 ,    ,   ,    ,    ,    ,
+       ,    ,    ,   ,     ,   ,                 ,    ,   ,    ,RGB_VAI, RGB_HUI,
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
-         ,    ,    ,QWER,WIN ,RST ,            RTOG,MAC ,EDJP,    ,    ,RGB_MOD,
+         ,    ,    ,QWER,WIN ,RST ,            RTOG,MAC ,EDJP,    ,RGB_VAD,RGB_MOD,
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
          ,    ,    ,    ,    ,    ,                ,    ,    ,    ,    ,RGB_TOG,
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
