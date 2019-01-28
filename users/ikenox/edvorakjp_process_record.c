@@ -1,5 +1,5 @@
 #include "edvorakjp.h"
-#include "rgb_matrix.h"
+#include "rgblight.h"
 
 #if TAP_DANCE_ENABLE != yes
 static uint16_t time_on_pressed;
@@ -226,28 +226,32 @@ static uint8_t key_led_map[8][6] = {
     {-1,-1,-1,14,13,6 },
 };
 
-//static uint32_t rgb_map[8][6] = {
-//    {0,0,0,0,0,0},
-//    {0,0,0,0,0,0},
-//    {0,0,0,0,0,0},
-//    {0,0,0,0,0,0},
-//    {0,0,0,0,0,0},
-//    {0,0,0,0,0,0},
-//    {0,0,0,0,0,0},
-//    {0,0,0,0,0,0},
-//};
+static uint32_t rgb_map[8][6] = {
+    {0,0,0,0,0,0},
+    {0,0,0,0,0,0},
+    {0,0,0,0,0,0},
+    {0,0,0,0,0,0},
+    {0,0,0,0,0,0},
+    {0,0,0,0,0,0},
+    {0,0,0,0,0,0},
+    {0,0,0,0,0,0},
+};
 
 bool process_record_led(uint16_t keycode, keyrecord_t *record) {
   if(is_master ^ (record->event.key.row >= 4)){
     if (record->event.pressed) {
-//        uint32_t rgb;
-//        rgb = rgblight_get_rgb(key_led_map[record->event.key.row][record->event.key.col]);
-//        rgb_map[record->event.key.row][record->event.key.col] = rgb;
+        uint32_t rgb = rgblight_getrgb_at(key_led_map[record->event.key.row][record->event.key.col]);
+        rgb_map[record->event.key.row][record->event.key.col] = rgb;
         rgblight_setrgb_at(255,0,0,key_led_map[record->event.key.row][record->event.key.col]);
     }
     else {
-        rgblight_sethsv_springgreen_at(key_led_map[record->event.key.row][record->event.key.col]);
+        uint32_t rgb = rgb_map[record->event.key.row][record->event.key.col];
+        int r = rgb >> 16 & 0xFF;
+        int g = rgb >> 8 & 0xFF;
+        int b = rgb & 0xFF;
+        rgblight_setrgb_at(r,g,b, key_led_map[record->event.key.row][record->event.key.col]);
     }
   }
   return true;
 }
+

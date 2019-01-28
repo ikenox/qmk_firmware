@@ -545,6 +545,14 @@ void rgblight_setrgb(uint8_t r, uint8_t g, uint8_t b) {
   rgblight_set();
 }
 
+uint32_t rgblight_getrgb_at(uint8_t index) {
+  int rgb = 0;
+  rgb += (uint32_t)led[index].r << 16;
+  rgb += (uint32_t)led[index].g << 8;
+  rgb += (uint32_t)led[index].b;
+  return rgb;
+}
+
 void rgblight_setrgb_at(uint8_t r, uint8_t g, uint8_t b, uint8_t index) {
   if (!rgblight_config.enable || index >= RGBLED_NUM) { return; }
 
