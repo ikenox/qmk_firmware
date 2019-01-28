@@ -113,7 +113,7 @@ const rgb_led g_rgb_leds[DRIVER_LED_TOTAL] = {
   {{0x07}, {220, 35}, 0},
 };
 
-static struct rgb_t {
+static struct {
   uint8_t b;
   uint8_t g;
   uint8_t r;
@@ -123,10 +123,6 @@ static void set_color(int index, uint8_t r, uint8_t g, uint8_t b) {
   led_state[index].r = r;
   led_state[index].g = g;
   led_state[index].b = b;
-}
-
-static rgb_t get_color(int index, uint8_t r, uint8_t g, uint8_t b) {
-  return led_state[index];
 }
 
 static void set_color_all(uint8_t r, uint8_t g, uint8_t b) {
@@ -166,7 +162,6 @@ const rgb_matrix_driver_t rgb_matrix_driver = {
   .flush = flush,
   .set_color = set_color,
   .set_color_all = set_color_all
-  .get_color = get_color
 };
 
 #endif
