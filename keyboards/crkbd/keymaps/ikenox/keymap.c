@@ -101,6 +101,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 int RGB_current_mode;
 
+void keyboard_post_init_user(void) {
+    wait_ms(1000);
+    rgblight_disable_noeeprom();
+}
+
 void persistent_default_layer_set(uint16_t default_layer) {
   eeconfig_update_default_layer(default_layer);
   default_layer_set(default_layer);
