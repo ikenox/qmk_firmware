@@ -32,36 +32,22 @@ enum macro_keycodes {
 
 #define KC_ KC_TRNS
 
-#define KC_TMB1 LGUI_T(KC_TAB)
-#define KC_TMB2 LSFT_T(KC_SPC)
-#define KC_TMB5 RCTL_T(KC_BSPC)
-#define KC_TMB6 RALT_T(KC_ENT)
-#define KC_TMB7 KC_DEL
 #define KC_RGB_TOG RGB_TOG
 #define KC_RGB_MOD RGB_MOD
-#define KC_TMB8 RALT(KC_ENT)
-#define KC_TMB9 LGUI(KC_TAB)
-#define KC_CTLTB CTL_T(KC_TAB)
-#define KC_GUIEI GUI_T(KC_LANG2)
-#define KC_GUIKN GUI_T(KC_LANG1)
-#define KC_CTLSP LCTL(KC_SPC)
 #define KC_RGB_HUI RGB_HUI
 #define KC_RGB_VAI RGB_VAI
 #define KC_RGB_VAD RGB_VAD
 
-#define KC_LOWER MO(_LOWER)
-#define KC_RAISE MO(_RAISE)
-
+#define KC_GUIEI GUI_T(KC_LANG2)
 #define KC_ALTKN ALT_T(KC_LANG1)
 
-#define KC_RAENT KC_ENT
-#define KC_LASPC KC_SPC
-
 #define KC_RSBSL RSFT_T(KC_BSLS)
-#define KC_RSSLS RSFT_T(KC_SLSH)
 
 #define KC_RST  RESET
 #define KC_DBUG DEBUG
+
+#define KC_RAISE RAISE
+#define KC_LOWER LOWER
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc(
@@ -72,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
      LSFT, Z  , X  , C  , V  , B  ,             N  , M  ,COMM,DOT ,SLSH,RSBSL,
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                      GUIEI,RAISE,LASPC,  RAENT,LOWER,ALTKN \
+                      GUIEI,RAISE,SPC,  ENT,LOWER,ALTKN \
   //                    `----+----+----' `----+----+----'
   ),
 
@@ -84,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
      CIRC, 6  , 7  , 8  , 9  , 0  ,                ,BSPC, LT , GT ,    ,    ,\
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                      GUIEI,RAISE,LASPC,  RAENT,LOWER,ALTKN \
+                      GUIEI,RAISE,SPC,  ENT,LOWER,ALTKN \
   //                    `----+----+----' `----+----+----'
   ),
 
@@ -96,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
      CIRC, 6  , 7  , 8  , 9  , 0  ,                ,BSPC, LT , GT ,    ,    ,\
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                      GUIEI,RAISE,LASPC,  RAENT,LOWER,ALTKN \
+                      GUIEI,RAISE,SPC,  ENT,LOWER,ALTKN \
   //                    `----+----+----' `----+----+----'
   ),
 
@@ -108,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|           |----+----+----+----+----+----|
      DBUG ,    ,    ,    ,    ,    ,                ,    ,    ,    ,    ,RGB_TOG,
   //`----+----+----+----+----+----+----| |----+----+----+----+----+----+----'
-                             ,    ,    ,      ,    ,
+                             ,RAISE,   ,      ,LOWER,
   //                    `----+----+----' `----+----+----'
   )
 };
